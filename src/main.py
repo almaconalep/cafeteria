@@ -6,7 +6,7 @@ from io_utils import (
 from services import CafeteriaService  # Lógica de negocio
 
 # Rutas a CSV relativos a /data
-DATA_DIR = Path(_file_).resolve().parent.parent / "data"
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 RUTA_MENU = DATA_DIR / "menu.csv"
 RUTA_ALUMNOS = DATA_DIR / "alumnos.csv"
 RUTA_PROFES = DATA_DIR / "profesores.csv"
@@ -127,5 +127,5 @@ def main():
         # Manejo simple de errores para didáctica
         print(f"\nERROR: {e}")
 
-if _name_ == "_main_":  # Punto de entrada del script
+if __name__ == "__main__":  # Punto de entrada del script
     main()
