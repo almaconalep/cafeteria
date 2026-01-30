@@ -127,5 +127,5 @@ def main():
         # Manejo simple de errores para didáctica
         print(f"\nERROR: {e}")
 
-if __name__ == "__main__":  # Punto de entrada del script
+if __name__ == "__main__":  # Punto de entrada del script 
     main()
