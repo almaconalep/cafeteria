@@ -22,8 +22,8 @@ def cargar_alumnos(ruta: str) -> Dict[str, Alumno]:   #  Ruta al archivo CSV de 
     with open(ruta, newline='', encoding='utf-8') as f:  # Abrir archivo CSV
         archivo = csv.DictReader(f)
         for r in archivo:
-            alumnos[r["matricula"]] = Alumno(
-                matricula=r["matricula"].strip(),
+            alumnos[r["mat"]] = Alumno(
+                mat=r["mat"].strip(),
                 nombre=r["nombre"].strip(),
                 carrera=r["carrera"].strip(),
                 fecha_nacimiento=r["fecha_nacimiento"].strip(),
