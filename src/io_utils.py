@@ -23,7 +23,7 @@ def cargar_alumnos(ruta: str) -> Dict[str, Alumno]:   #  Ruta al archivo CSV de 
         archivo = csv.DictReader(f)
         for r in archivo:
             alumnos[r["matricula"]] = Alumno(
-                matricula=r["matricula].strip(),
+                matricula=r["matricula"].strip(),
                 nombre=r["nombre"].strip(),
                 carrera=r["carrera"].strip(),
                 fecha_nacimiento=r["fecha_nacimiento"].strip(),
