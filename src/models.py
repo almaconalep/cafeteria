@@ -1,4 +1,4 @@
-from _future_ import annotations  # Permite referencias de tipos a clases definidas más abajo
+from __future__ import annotations  # Permite referencias de tipos a clases definidas más abajo
 from dataclasses import dataclass   # Facilita clases de datos sin _init_ manual
 from datetime import datetime, timedelta  # Manejo de fechas/horas y sumas de tiempo
 from enum import Enum               # Enumeraciones para valores controlados
