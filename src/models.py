@@ -52,10 +52,16 @@ class Alumno(Cliente):
         e guarden dentro del objeto único que acabas de crear, y no en la clase en general."""
     def _init_(self, matricula: str, nombre: str, carrera: str, fecha_nacimiento: str, credito_disponible: float):
         # super(): inicializa los campos heredados de Cliente
-        super()._init_(id_publico=matricula, nombre=nombre, tipo=TipoCliente.ALUMNO)
+        #super()._init_(id_publico=matricula, nombre=nombre, tipo=TipoCliente.ALUMNO)
+        self.matricula = matricula #LO AGREGUE
+        self.nombre = nombre #LO AGREGUE
         self.carrera = carrera
         self.fecha_nacimiento = fecha_nacimiento
         self.credito_disponible = credito_disponible
+
+    
+        
+        
 
 
 @dataclass  # Profesor hereda de Cliente e incluye turno y grado profesional.
