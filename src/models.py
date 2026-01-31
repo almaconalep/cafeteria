@@ -44,6 +44,8 @@ class Cliente:
 @dataclass   # Alumno hereda de Cliente e incluye carrera, fecha de nacimiento y crédito disponible.
 class Alumno(Cliente):
     """Alumno con atributos y saldo de crédito."""
+    matricula: str
+    nombre: str
     carrera: str
     fecha_nacimiento: str  # YYYY-MM-DD
     credito_disponible: float
@@ -52,7 +54,7 @@ class Alumno(Cliente):
         e guarden dentro del objeto único que acabas de crear, y no en la clase en general."""
     def _init_(self, matricula: str, nombre: str, carrera: str, fecha_nacimiento: str, credito_disponible: float):
         # super(): inicializa los campos heredados de Cliente
-        #super()._init_(id_publico=matricula, nombre=nombre, tipo=TipoCliente.ALUMNO)
+        super()._init_(id_publico=matricula, nombre=nombre, tipo=TipoCliente.ALUMNO)
         self.matricula = matricula #LO AGREGUE
         self.nombre = nombre #LO AGREGUE
         self.carrera = carrera
